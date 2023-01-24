@@ -1,0 +1,6 @@
+Auth-> user,id
+Blog-> title, description, Fk- user_id
+Comment-> comment, user_id, blog_id
+
+Common Things->
+model, controllers, routers
