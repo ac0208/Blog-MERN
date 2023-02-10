@@ -4,6 +4,7 @@ const cors= require ("cors");
 const bodyParser=require("body-parser");
 const authRouter=require("./src/auth/router");
 const BlogRouter = require("./src/blog/router");
+const CommentRouter=require("./src/comment/router");
 
 const app=express();
 app.use(cors());
@@ -17,6 +18,7 @@ mongoose.connection.on("connected",()=>{               //arrow function is also 
 
 app.use("/auth",authRouter);
 app.use("/blog",BlogRouter);
+app.use("/comment",CommentRouter);
 
 app.listen(4100,()=>{
     console.log("Server Started on the Respective Port");

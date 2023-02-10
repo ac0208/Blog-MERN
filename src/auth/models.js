@@ -27,7 +27,6 @@ userSchema.virtual("password").set(function(password) {       // arrow function 
     this.salt=uuid.v4();
     this.ency_password=this.securePassword(password);
 });
-mongoose.set('strictQuery', true);
-
+mongoose.set('strictQuery',true);
 const User=mongoose.model("User",userSchema);
 module.exports={User};
